@@ -14,7 +14,7 @@ Guarde las capturas en `documentacion/evidencias/capturas/` con los nombres indi
 | `08_entregas.png` | Pedido listo para entregar |
 | `09_caja_cierre.png` | Cuenta y cierre de mesa |
 | `10_pruebas_postgresql.png` | Suite ejecutada en PostgreSQL |
-| `11_docker_segundo_pc.png` | Sistema iniciado con Compose |
+| `11_sitio_publicado.png` | Carta abierta en https://kippurestaurant.com desde un teléfono con datos móviles, con el candado de HTTPS |
 | `12_commits_equipo.png` | Historial visible de ambos integrantes |
 
-Cada captura debe ir acompañada por una frase que indique qué requisito demuestra. El registro automático disponible no sustituye las capturas de PostgreSQL, Docker o Webpay real de integración.
+Cada captura debe ir acompañada por una frase que indique qué requisito demuestra. El registro automático disponible no sustituye las capturas de PostgreSQL, del sitio publicado o de Webpay real de integración.
