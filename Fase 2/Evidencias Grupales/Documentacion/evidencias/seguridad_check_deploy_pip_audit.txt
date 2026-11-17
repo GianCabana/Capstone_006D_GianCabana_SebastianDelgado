@@ -1,0 +1,73 @@
+Kippu - pruebas de seguridad - 15-11-2026 19:54 - repositorio GianCabana/kippu, rama main, commit b5cb067
+
+== 1. manage.py check --deploy, DEBUG apagado y DJANGO_HTTPS apagado (estado antes de la corrección de HTTPS) ==
+System check identified some issues:
+WARNINGS:
+?: (security.W004) You have not set a value for the SECURE_HSTS_SECONDS setting. If your entire site is served only over SSL, you may want to consider setting a value and enabling HTTP Strict Transport Security. Be sure to read the documentation first; enabling HSTS carelessly can cause serious, irreversible problems.
+?: (security.W008) Your SECURE_SSL_REDIRECT setting is not set to True. Unless your site should be available over both SSL and non-SSL connections, you may want to either set this setting True or configure a load balancer or reverse-proxy server to redirect all connections to HTTPS.
+?: (security.W012) SESSION_COOKIE_SECURE is not set to True. Using a secure-only session cookie makes it more difficult for network traffic sniffers to hijack user sessions.
+?: (security.W016) You have 'django.middleware.csrf.CsrfViewMiddleware' in your MIDDLEWARE, but you have not set CSRF_COOKIE_SECURE to True. Using a secure-only CSRF cookie makes it more difficult for network traffic sniffers to steal the CSRF token.
+System check identified 4 issues (0 silenced).
+
+== 2. manage.py check --deploy, DEBUG apagado y DJANGO_HTTPS encendido (configuración del sitio publicado) ==
+System check identified some issues:
+WARNINGS:
+?: (security.W005) You have not set the SECURE_HSTS_INCLUDE_SUBDOMAINS setting to True. Without this, your site is potentially vulnerable to attack via an insecure connection to a subdomain. Only set this to True if you are certain that all subdomains of your domain should be served exclusively via SSL.
+?: (security.W021) You have not set the SECURE_HSTS_PRELOAD setting to True. Without this, your site cannot be submitted to the browser preload list.
+System check identified 2 issues (0 silenced).
+
+== 3. pip-audit sobre requirements.txt del commit 1de2176 (antes de actualizar Pillow, versión 12.3.0) ==
+Found 44 known vulnerabilities in 2 packages
+Name        Version ID                  Fix Versions
+----------- ------- ------------------- ------------
+pillow      12.3.0  PYSEC-2026-4327     13.0.0
+pillow      12.3.0  PYSEC-2026-4328     13.0.0
+pillow      12.3.0  PYSEC-2026-4326     13.0.0
+pillow      12.3.0  PYSEC-2026-4339     13.0.0
+pillow      12.3.0  PYSEC-2026-4340     13.0.0
+pillow      12.3.0  PYSEC-2026-4343     13.0.0
+pillow      12.3.0  PYSEC-2026-4334     13.0.0
+pillow      12.3.0  PYSEC-2026-4337     13.0.0
+pillow      12.3.0  PYSEC-2026-4341     13.0.0
+pillow      12.3.0  PYSEC-2026-4330     13.0.0
+pillow      12.3.0  PYSEC-2026-4338     13.0.0
+pillow      12.3.0  PYSEC-2026-4335     13.0.0
+pillow      12.3.0  PYSEC-2026-4336     13.0.0
+pillow      12.3.0  PYSEC-2026-4331     13.0.0
+pillow      12.3.0  PYSEC-2026-4332     13.0.0
+pillow      12.3.0  PYSEC-2026-4329     13.0.0
+pillow      12.3.0  PYSEC-2026-4333     13.0.0
+pillow      12.3.0  PYSEC-2026-4342     13.0.0
+pillow      12.3.0  PYSEC-2026-4363     13.0.0
+pillow      12.3.0  CVE-2026-112895     13.0.0
+pillow      12.3.0  CVE-2026-112400     13.0.0
+pillow      12.3.0  CVE-2026-112897     13.0.0
+pillow      12.3.0  CVE-2026-112395     13.0.0
+pillow      12.3.0  CVE-2026-112404     13.0.0
+pillow      12.3.0  CVE-2026-112899     13.0.0
+pillow      12.3.0  CVE-2026-112900     13.0.0
+pillow      12.3.0  CVE-2026-112893     13.0.0
+pillow      12.3.0  CVE-2026-112891     13.0.0
+pillow      12.3.0  CVE-2026-112390     13.0.0
+pillow      12.3.0  CVE-2026-112401     13.0.0
+pillow      12.3.0  CVE-2026-112391     13.0.0
+pillow      12.3.0  CVE-2026-112894     13.0.0
+pillow      12.3.0  CVE-2026-112406     13.0.0
+pillow      12.3.0  CVE-2026-112399     13.0.0
+pillow      12.3.0  CVE-2026-112892     13.0.0
+pillow      12.3.0  CVE-2026-112393     13.0.0
+pillow      12.3.0  CVE-2026-96638      13.0.0
+pillow      12.3.0  CVE-2026-96640      13.0.0
+pillow      12.3.0  CVE-2026-96778      13.0.0
+pillow      12.3.0  GHSA-78g4-xqwv-q3g8 13.0.0
+pillow      12.3.0  CVE-2026-128067     13.0.0
+pillow      12.3.0  CVE-2026-128066     13.0.0
+marshmallow 3.26.1  PYSEC-2026-1605     3.26.2,4.1.2
+marshmallow 3.26.1  PYSEC-2026-1605     3.26.2,4.1.2
+
+== 4. pip-audit sobre requirements.txt actual (b5cb067, Pillow 13.0.0) ==
+Found 2 known vulnerabilities in 1 package
+Name        Version ID              Fix Versions
+----------- ------- --------------- ------------
+marshmallow 3.26.1  PYSEC-2026-1605 3.26.2,4.1.2
+marshmallow 3.26.1  PYSEC-2026-1605 3.26.2,4.1.2

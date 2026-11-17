@@ -26,7 +26,8 @@ erDiagram
 - El número de mesa es único dentro de cada local.
 - Una mesa tiene como máximo una cuenta abierta.
 - Un pedido pagado tiene como máximo un pago asociado.
-- Un pedido o cuenta no puede mantener más de un intento Webpay activo según las restricciones condicionales.
+- Un pedido no puede mantener más de un intento Webpay activo (la restricción es **por pedido**). La restricción por cuenta solo se aplica a los intentos sin pedido, que pagan una cuenta anterior.
+- Un pedido que se paga en caja queda en estado "por pagar en caja" y no tiene intento Webpay. El pago lo registra el personal con método efectivo, débito o crédito, y queda guardado quién lo registró.
 - Los precios, opciones, propina y condición de mayoría de edad quedan registrados como una fotografía del pedido.
 - Los montos deben ser positivos y la propina no puede ser negativa.
 
@@ -41,4 +42,8 @@ erDiagram
 | DetallePedido | Producto, nombre, precio, cantidad, opciones y restricción de edad |
 | Cuenta | Mesa, estado, apertura y cierre |
 | IntentoWebpay | Orden, sesión, token, monto, estado y datos de autorización |
-| Pago | Cuenta, pedido, intento, monto, método y fecha |
+| Pago | Cuenta, pedido, intento (solo Webpay), monto, método (Webpay, efectivo, débito o crédito), usuario que lo registró (pago en caja) y fecha |
+
+## Migraciones
+
+El modelo llega hasta la migración `0012` de `pedidos` (`0012_alter_pedido_estado`, que agrega el estado "por pagar en caja"). `carta` llega hasta `0005` y `mesas` hasta `0003`.
