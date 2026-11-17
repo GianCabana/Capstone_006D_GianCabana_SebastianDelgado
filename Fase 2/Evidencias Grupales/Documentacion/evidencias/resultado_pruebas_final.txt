@@ -1,0 +1,15 @@
+Kippu - suite completa - 17-11-2026 01:03 - rama main, commit 3c48e1e
+
+Motor: postgresql PostgreSQL 170011
+
+Creating test database for alias 'default'...
+............C:\Users\seban\OneDrive\Escritorio\Claude Trabajos\Capstone\kippu\.venv\Lib\site-packages\django\core\handlers\base.py:61: UserWarning: No directory at: C:\Users\seban\OneDrive\Escritorio\Claude Trabajos\Capstone\kippu\staticfiles\
+  mw_instance = middleware(adapted_handler)
+.....................................................................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 289 tests in 117.007s
+
+OK
+Destroying test database for alias 'default'...
+Found 289 test(s).
+System check identified no issues (0 silenced).

@@ -2,7 +2,7 @@
 
 Esta carpeta reúne los artefactos solicitados para la Fase 2 del Proyecto APT. Los diagramas usan Mermaid para que GitHub los muestre directamente junto con su explicación.
 
-Código documentado: repositorio `GianCabana/kippu`, rama `main`, commit [POR COMPLETAR]. Aplicación publicada en https://kippurestaurant.com.
+Código documentado: repositorio `GianCabana/kippu`, rama `main`, commit `3c48e1e`. Aplicación publicada en https://kippurestaurant.com.
 
 | Documento | Estado | Evidencia principal |
 |---|---|---|
@@ -11,7 +11,7 @@ Código documentado: repositorio `GianCabana/kippu`, rama `main`, commit [POR CO
 | Diagramas UML | Documentado | Casos de uso, clases, secuencia y componentes |
 | Requisitos no funcionales | Documentado | Criterios y estado verificable |
 | Despliegue | Publicado | Railway con Cloudflare delante, dominio y HTTPS |
-| Pruebas | Documentado | [POR COMPLETAR: número final de pruebas] en PostgreSQL, sin omitidas; `check --deploy` y `pip-audit` |
+| Pruebas | Documentado | 289 pruebas en PostgreSQL, sin omitidas; `check --deploy` y `pip-audit` |
 | Innovación | Documentado | Problema, diferencia y valor |
 | Evidencias | Pendiente de capturas | Lista de `08_EVIDENCIAS.md` |
 | Aportes de los integrantes | Documentado | Ejes de trabajo e historial de Git |

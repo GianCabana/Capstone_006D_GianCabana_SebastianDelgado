@@ -6,7 +6,7 @@
 | RNF02 | Seguridad | El servidor calcula cantidades, opciones y montos desde datos vigentes; no confía en el total enviado por el navegador | Implementado y cubierto por pruebas |
 | RNF03 | Seguridad | Las credenciales se cargan desde variables de entorno y `.env` no se versiona | Implementado; revisar secretos antes de publicar |
 | RNF04 | Integridad | La autorización Webpay se compara con monto, orden y sesión antes de crear el pago | Implementado y cubierto por pruebas simuladas |
-| RNF05 | Concurrencia | Los flujos de pago y cierre usan transacciones y bloqueos de filas | Implementado y cubierto por pruebas: la suite completa, con las pruebas de concurrencia, corre en PostgreSQL sin pruebas omitidas ([POR COMPLETAR: número final de pruebas] en `main`, commit [POR COMPLETAR]) |
+| RNF05 | Concurrencia | Los flujos de pago y cierre usan transacciones y bloqueos de filas | Implementado y cubierto por pruebas: la suite completa, con las pruebas de concurrencia, corre en PostgreSQL sin pruebas omitidas (289 pruebas en `main`, commit `3c48e1e`) |
 | RNF06 | Rendimiento | La carta de una mesa debe responder en menos de 2 segundos con 50 usuarios concurrentes en el equipo de demostración | Pendiente de prueba de carga |
 | RNF07 | Disponibilidad | Ante una respuesta incierta de Webpay no se crea un segundo cobro y el intento queda para revisión | Implementado y cubierto por pruebas simuladas |
 | RNF08 | Escalabilidad | Los datos se separan por local y los números de mesa pueden repetirse entre locales | Pendiente: la carta y las mesas ya se separan por local, pero el panel del personal (cocina, entregas y caja) todavía mezcla los pedidos de todos los locales |

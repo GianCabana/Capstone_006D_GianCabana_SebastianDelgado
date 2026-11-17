@@ -7,7 +7,7 @@ El trabajo se repartió en dos ejes (D-06, Roles y reparto del trabajo). Cada ej
 | Eje A | Sebastián Delgado | Carta, Mesas, Pedidos, modelo de datos, panel del personal y documentación |
 | Eje B | Gian Cabana | Pagos (Webpay y caja), Cocina, Entregas, Transbank, seguridad y despliegue |
 
-El historial final de la rama `main`, en el commit [POR COMPLETAR], identifica [POR COMPLETAR] commits de Sebastián Delgado y [POR COMPLETAR] commits de Gian Cabana. Para la entrega se conserva una captura del historial final (`12_commits_equipo.png`).
+El historial final de la rama `main`, en el commit `3c48e1e`, identifica 58 commits de Sebastián Delgado y 23 commits de Gian Cabana, sin contar los commits de unión (merge). Para la entrega se conserva una captura del historial final (`12_commits_equipo.png`).
 
 ## Gian Cabana · Eje B
 
@@ -19,7 +19,7 @@ En la etapa final de la Fase 2 (pull requests #3 a #7 del repositorio de código
 
 El historial identifica trabajo en el sistema visual, reorganización de plantillas y archivos estáticos, carta, carrito, pantallas Webpay, cocina, entregas, actualización parcial de pedidos, configuración de hosts, cierre automático por inactividad, nombre del pedido, apertura o cierre del servicio por QR, imágenes de productos y carga inicial de datos.
 
-En la etapa final de la Fase 2 agregó el tope de unidades por producto en el carrito, actualizó el README del código y revisó y unió los pull requests del Eje B.
+En la etapa final de la Fase 2 agregó el tope de unidades por producto en el carrito, actualizó el README del código y revisó y unió los pull requests del Eje B. También programó el pago en caja (13-10-2026) como apoyo al Eje B.
 
 ## Evidencia recomendada
 
