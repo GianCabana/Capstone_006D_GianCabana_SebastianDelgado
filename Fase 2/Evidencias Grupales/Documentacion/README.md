@@ -13,7 +13,7 @@ Código documentado: repositorio `GianCabana/kippu`, rama `main`, commit `3c48e1
 | Despliegue | Publicado | Railway con Cloudflare delante, dominio y HTTPS |
 | Pruebas | Documentado | 289 pruebas en PostgreSQL, sin omitidas; `check --deploy` y `pip-audit` |
 | Innovación | Documentado | Problema, diferencia y valor |
-| Evidencias | Pendiente de capturas | Lista de `08_EVIDENCIAS.md` |
+| Evidencias | Documentado | 12 capturas en `evidencias/capturas/`, según `08_EVIDENCIAS.md` |
 | Aportes de los integrantes | Documentado | Ejes de trabajo e historial de Git |
 
 Las evidencias visuales de la demostración deben guardarse en `documentacion/evidencias/capturas/` siguiendo la lista de `08_EVIDENCIAS.md`.
