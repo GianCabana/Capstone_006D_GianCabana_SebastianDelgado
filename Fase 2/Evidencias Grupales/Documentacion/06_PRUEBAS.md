@@ -2,7 +2,7 @@
 
 ## Resultado de las pruebas automáticas
 
-Se ejecutó la suite completa sobre la rama `main` en el commit `3c48e1e`, con **PostgreSQL**. Resultado: 289 pruebas correctas, **ninguna omitida**. Las pruebas de concurrencia, que necesitan el bloqueo `SELECT FOR UPDATE` de PostgreSQL, ya corren junto con el resto. La salida completa queda en `evidencias/resultado_pruebas_final.txt`.
+Se ejecutó la suite completa sobre la rama `main` en el commit `a325aef` (24-11-2026), con **PostgreSQL**. Resultado: 339 pruebas correctas, **ninguna omitida**. Las pruebas de concurrencia, que necesitan el bloqueo `SELECT FOR UPDATE` de PostgreSQL, ya corren junto con el resto. La salida completa queda en `evidencias/resultado_pruebas_final.txt`.
 
 Las pruebas de Webpay usan dobles de prueba del SDK de Transbank. Por ello, este resultado no demuestra por sí solo un pago en el ambiente de integración; esa prueba se registra aparte (ver Pruebas pendientes).
 
